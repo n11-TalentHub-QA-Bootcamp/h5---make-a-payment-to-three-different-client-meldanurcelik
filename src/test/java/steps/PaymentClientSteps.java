@@ -3,7 +3,6 @@ package steps;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
@@ -12,12 +11,9 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import tasks.GoToPayment;
 import tasks.LoginToEriBank;
-import ui.HomePageElements;
+import tasks.MakePayment;
 
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.containsText;
-import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
-
-public class PaymentDiffClientSteps {
+public class PaymentClientSteps {
     @Managed(driver = "Appium")
     public WebDriver herMobileDevice;
 
@@ -40,9 +36,8 @@ public class PaymentDiffClientSteps {
         actor.attemptsTo(GoToPayment.goTo());
     }
 
-
     @Then("Pay with {string}, {string}, {string} and {string}")
-    public void pay_with_and(String string, String string2, String string3, String string4) {
-
+    public void pay_with_and(String phone, String name, String amount, String country) {
+        actor.attemptsTo(MakePayment.pay(phone, name, amount, country));
     }
 }

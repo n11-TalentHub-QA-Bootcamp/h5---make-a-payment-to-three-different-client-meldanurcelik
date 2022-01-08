@@ -1,5 +1,3 @@
-package steps;
-
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
@@ -12,8 +10,9 @@ import java.io.IOException;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        //tags ="@seach_film"
-        tags ="@auth"
+        //tags = "@auth"
+        //tags = "auth_incorrect"
+        tags = "@payment_client"
 )
 
 public class Runner {
@@ -27,6 +26,6 @@ public class Runner {
 
     @AfterClass
     public static void stopAppiumServer() {
-        //   appiumService.stop();
+        appiumService.stop();
     }
 }
