@@ -14,10 +14,11 @@ import tasks.LoginToEriBank;
 import tasks.MakePayment;
 
 public class PaymentClientSteps {
+
     @Managed(driver = "Appium")
     public WebDriver herMobileDevice;
 
-    String actorName = "hhag";
+    String actorName = "melda";
     Actor actor = Actor.named(actorName);
 
     @Before

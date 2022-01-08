@@ -24,7 +24,7 @@ public class MakePayment implements Task {
     }
 
     @Override
-    @Step("{0} logins to the eribank")
+    @Step("{0} payment to the eribank")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(PaymentPageElements.PHONE_FIELD),

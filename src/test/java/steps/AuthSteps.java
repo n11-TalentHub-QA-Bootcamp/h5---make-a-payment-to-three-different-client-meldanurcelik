@@ -22,7 +22,7 @@ public class AuthSteps {
     @Managed(driver = "Appium")
     public WebDriver herMobileDevice;
 
-    String actorName = "hhag";
+    String actorName = "melda";
     Actor actor = Actor.named(actorName);
 
     @Before

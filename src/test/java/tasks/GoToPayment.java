@@ -3,10 +3,8 @@ package tasks;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.SendKeys;
 import net.thucydides.core.annotations.Step;
 import ui.HomePageElements;
-import ui.PaymentPageElements;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
